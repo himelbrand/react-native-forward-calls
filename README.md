@@ -61,7 +61,7 @@ public class MainActivity extends ReactActivity {
 import ForwardCalls from 'react-native-forward-calls'
 ```
 
-#### Forward all calls unconditionally (**21*) 
+#### Forward all calls unconditionally (\*\*21\*) 
 
 ```javascript
 ForwardCalls.forwardCalls('123456789')//will forward all calls to the number 123456789
