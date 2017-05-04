@@ -28,7 +28,7 @@ public class RNForwardCallsModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void forwardCalls(String phoneNumber) {
+  public void unconditionalForwarding(String phoneNumber) {
     String uri = "tel:**21*" + Uri.encode(phoneNumber+"#");
     Intent intent = new Intent(Intent.ACTION_CALL);
     intent.setData(Uri.parse(uri));
@@ -36,11 +36,75 @@ public class RNForwardCallsModule extends ReactContextBaseJavaModule {
     this.reactContext.startActivity(intent);
   }
   @ReactMethod
-  public void cancel() {
+  public void forwardCallsIfBusy(String phoneNumber) {
+    String uri = "tel:**67*" + Uri.encode(phoneNumber+"#");
+    Intent intent = new Intent(Intent.ACTION_CALL);
+    intent.setData(Uri.parse(uri));
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void forwardCallsIfNotAnswered (String phoneNumber) {
+    String uri = "tel:*61*" + Uri.encode(phoneNumber+"#");
+    Intent intent = new Intent(Intent.ACTION_CALL);
+    intent.setData(Uri.parse(uri));
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void forwardCallsIfOutOfReach (String phoneNumber) {
+    String uri = "tel:*62*" + Uri.encode(phoneNumber+"#");
+    Intent intent = new Intent(Intent.ACTION_CALL);
+    intent.setData(Uri.parse(uri));
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void allConditionalForwarding (String phoneNumber) {
+    String uri = "tel:*002*" + Uri.encode(phoneNumber+"#");
+    Intent intent = new Intent(Intent.ACTION_CALL);
+    intent.setData(Uri.parse(uri));
+    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void cancelUnconditional() {
       String uri = "tel:" + Uri.encode("##21#");
       Intent intent = new Intent(Intent.ACTION_CALL);
       intent.setData(Uri.parse(uri));
       intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       this.reactContext.startActivity(intent);
-    }
+  }
+  @ReactMethod
+  public void cancelIfBusy() {
+      String uri = "tel:" + Uri.encode("##67#");
+      Intent intent = new Intent(Intent.ACTION_CALL);
+      intent.setData(Uri.parse(uri));
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void cancelIfNotAnswered() {
+      String uri = "tel:" + Uri.encode("##61#");
+      Intent intent = new Intent(Intent.ACTION_CALL);
+      intent.setData(Uri.parse(uri));
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void cancelIfOutOfReach() {
+      String uri = "tel:" + Uri.encode("##62#");
+      Intent intent = new Intent(Intent.ACTION_CALL);
+      intent.setData(Uri.parse(uri));
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void cancelAllConditional() {
+      String uri = "tel:" + Uri.encode("##002#");
+      Intent intent = new Intent(Intent.ACTION_CALL);
+      intent.setData(Uri.parse(uri));
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      this.reactContext.startActivity(intent);
+  }
 }
