@@ -67,59 +67,23 @@ public class MainActivity extends ReactActivity {
 import ForwardCalls from 'react-native-forward-calls'
 ```
 
-#### Forward all calls unconditionally 
+#### Forward calls 
 
 ```javascript
-ForwardCalls.unconditionalForwarding('123456789')//will forward all calls to the number 123456789
+ForwardCalls.unconditionalForwarding('123456789')//Forward all calls unconditionally to the number 123456789
+ForwardCalls.forwardCallsIfBusy('123456789')//Forward calls if busy to the number 123456789
+ForwardCalls.forwardCallsIfNotAnswered('123456789')//Forward calls if not answered to the number 123456789
+ForwardCalls.forwardCallsIfOutOfReach('123456789')//Forward calls if out of reach to the number 123456789
+ForwardCalls.allConditionalForwarding('123456789')//All conditional forwarding activated to the number 123456789
 ```
 
-#### Cancel unconditional call forwarding
+#### Cancel call forwarding
 
 ```javascript
 ForwardCalls.cancelUnconditional()
-```
-#### Forward calls if busy
-
-```javascript
-ForwardCalls.forwardCallsIfBusy('123456789')//will forward all calls to the number 123456789
-```
-
-#### Cancel if busy call forwarding
-
-```javascript
 ForwardCalls.cancelIfBusy()
-```
-#### Forward calls if not answered 
-
-```javascript
-ForwardCalls.forwardCallsIfNotAnswered('123456789')//will forward all calls to the number 123456789
-```
-
-#### Cancel  if not answered call forwarding
-
-```javascript
 ForwardCalls.cancelIfNotAnswered()
-```
-#### Forward calls if out of reach 
-
-```javascript
-ForwardCalls.forwardCallsIfOutOfReach('123456789')//will forward all calls to the number 123456789
-```
-
-#### Cancel if out of reach  call forwarding
-
-```javascript
 ForwardCalls.cancelIfOutOfReach()
-```
-#### All conditional forwarding
-
-```javascript
-ForwardCalls.allConditionalForwarding('123456789')//will forward all calls to the number 123456789
-```
-
-#### Cancel all conditional forwarding
-
-```javascript
 ForwardCalls.cancelAllConditional()
 ```
 
