@@ -6,6 +6,12 @@ Android's Native call forwarding in React Native
 ```bash
 npm install react-native-forward-calls --save
 ```
+## Add permissions
+* In `AndroidManifest.xml` add:
+```xml
+
+<uses-permission android:name="android.permission.CALL_PHONE" />
+```
 ## Project setup and initialization auto
 ```bash
 react-native link
