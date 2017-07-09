@@ -1,6 +1,6 @@
 {
   "name": "react-native-forward-calls",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Android's Native call forwarding in React Native",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "react-native"
   ],
   "author": "Himelbrand",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/himelbrand/react-native-forward-calls/issues"
   },
