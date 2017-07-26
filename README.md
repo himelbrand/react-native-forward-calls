@@ -4,20 +4,18 @@ Welcome!
 this project is not yet complete,
 for all ready parts see documentation below.
 (docs are not complete, feel free to improve them)
-
+## Realease notes
+ version 1.1.0
+   * added support for custom MMI codes call forwards and cancellation 
+    
 ### Still missing
 - this project have no support for IOS what so ever, since I don't own a mac 
-- custom forwards (the MMI code sent as a parameter to the function)
 - some of the MMI codes for Android
 if you would like to contribute to this project or suggest more future features you're welcome to so via an issue or pull request.
 
 ### IOS support
 right now this package does not support IOS, so any one that wants to help and contribute the IOS support is more than welcome to do so after contacting me to verify (so you won't do the work for nothing in case it's already under construction)
 
-## Realease notes
- version 1.1.0
-   * added support for custom MMI codes call forwards and cancellation 
-    
 
 ## Installation
 
