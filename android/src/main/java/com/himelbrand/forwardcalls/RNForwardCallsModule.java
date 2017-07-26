@@ -36,6 +36,14 @@ public class RNForwardCallsModule extends ReactContextBaseJavaModule {
     this.reactContext.startActivity(intent);
   }
   @ReactMethod
+  public void customCodeForwarding(String code,String phoneNumber) {
+      String uri = "tel:" + code + Uri.encode(phoneNumber + "#");
+      Intent intent = new Intent(Intent.ACTION_CALL);
+      intent.setData(Uri.parse(uri));
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
   public void forwardCallsIfBusy(String phoneNumber) {
     String uri = "tel:**67*" + Uri.encode(phoneNumber+"#");
     Intent intent = new Intent(Intent.ACTION_CALL);
@@ -102,6 +110,14 @@ public class RNForwardCallsModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void cancelAllConditional() {
       String uri = "tel:" + Uri.encode("##002#");
+      Intent intent = new Intent(Intent.ACTION_CALL);
+      intent.setData(Uri.parse(uri));
+      intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      this.reactContext.startActivity(intent);
+  }
+  @ReactMethod
+  public void cancelCustomForward(String code) {
+      String uri = "tel:" + Uri.encode(code);
       Intent intent = new Intent(Intent.ACTION_CALL);
       intent.setData(Uri.parse(uri));
       intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

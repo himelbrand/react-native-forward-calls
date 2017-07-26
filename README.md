@@ -1,6 +1,11 @@
 # React Native Forward Calls
 Android's Native call forwarding in React Native
 
+## Realease notes
+    **version 1.1.0**
+    added support for custom MMI codes call forwards and cancellation 
+    
+
 ## Installation
 
 ```bash
@@ -76,6 +81,7 @@ ForwardCalls.forwardCallsIfBusy('123456789')//Forward calls if busy to the numbe
 ForwardCalls.forwardCallsIfNotAnswered('123456789')//Forward calls if not answered to the number 123456789
 ForwardCalls.forwardCallsIfOutOfReach('123456789')//Forward calls if out of reach to the number 123456789
 ForwardCalls.allConditionalForwarding('123456789')//All conditional forwarding activated to the number 123456789
+ForwardCalls.customCodeForwarding('*72','123456789')//All calls forwarding activated to the number 123456789, north america code
 ```
 
 #### Cancel call forwarding
@@ -86,5 +92,6 @@ ForwardCalls.cancelIfBusy()
 ForwardCalls.cancelIfNotAnswered()
 ForwardCalls.cancelIfOutOfReach()
 ForwardCalls.cancelAllConditional()
+ForwardCalls.cancelCustomForward('*73') //String parameter of cancellation code  
 ```
 

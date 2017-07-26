@@ -1,6 +1,6 @@
 {
   "name": "react-native-forward-calls",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Android's Native call forwarding in React Native",
   "main": "index.js",
   "scripts": {
