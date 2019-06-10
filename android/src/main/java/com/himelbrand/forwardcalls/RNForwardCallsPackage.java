@@ -22,7 +22,7 @@ public class RNForwardCallsPackage implements ReactPackage {
     modules.add(new RNForwardCallsModule(reactContext));
     return modules;
   }
-  @Override
+
   public List<Class<? extends JavaScriptModule>> createJSModules() {
     return Collections.emptyList();
   }
